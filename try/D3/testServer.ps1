@@ -21,3 +21,4 @@ Start-Job { node $using:server } -Name $server | out-null
 
 # Launch the browser with the localhost, port and endpoint
 Start-Process http://localhost:$port/$endPoint
+Read-Host -Prompt "Press Enter to exit"

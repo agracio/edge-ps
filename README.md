@@ -1,27 +1,56 @@
 ## edge-ps
 
-This is a PowerShell compiler for edge.js.
 
-![ScreenShot](https://raw.github.com/dfinke/edge-ps/master/edge-ps.png)
+### This library is based on https://github.com/dfinke/edge-ps all credit for original work goes to Doug Finke. 
+------
 
-## What you need
+### This is a PowerShell compiler for edge.js.
 
-* Windows
-* [node.js](http://nodejs.org) 0.6.x or later (developed and tested with v0.6.20, v0.8.22, and v0.10.0, both x32 and x64 architectures)  
-* edge.js See the [Edge.js overview](http://tjanczuk.github.com/edge).
+Install edge and edge-ps modules:
 
-```
-npm install edge
-```
-
-* edge-ps 
-
-```
+``` 
+npm install edge-js
 npm install edge-ps
 ```
 
-* [.NET 4.5](http://www.microsoft.com/en-us/download/details.aspx?id=30653)  
+server.js:
+
+```javascript
+var edge = require('edge-js');
+
+var hello = edge.func('ps', function () {/*
+    "PowerShell welcomes $inputFromJS on $(Get-Date)"
+*/});
+
+hello('Node.js', function (error, result) {
+    if (error) throw error;
+    console.log(result[0]);
+});
+```
+
+Run and enjoy:
+
+```
+C:\testEdgeps>node server
+PowerShell welcomes Node.js on 05/04/2013 09:38:40
+```
+
+### Tapping into PowerShell's ecosystem
+
+Rather than embedding PowerShell directly, you can use PowerShell files, dot source them and even use *Import-Module*.
+
+What you can do in native PowerShell works in Node.js.
+
+## What you need
+
+* [Node.js](http://nodejs.org) 16.x or later. For Node.Js version support see [Edge.js](https://github.com/agracio/edge-js)
+* [Edge.js](https://github.com/agracio/edge-js)
 * PowerShell
+
+#### Supported .NET frameworks
+
+* .NET 4.5
+* .NET Core - dotnet 8 or later.  
 
 ## Access Excel from the web with Node.js and PowerShell
 
@@ -123,4 +152,4 @@ $dataset = Get-Process |
 */})
 ```
 
-See [edge.js overview](http://tjanczuk.github.com/edge) and [edge.js on GitHub](https://github.com/tjanczuk/edge) for more information. 
+[Edge.js on GitHub](https://github.com/agracio/edge-js) for more information. 

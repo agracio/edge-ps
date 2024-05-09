@@ -1,7 +1,7 @@
 ## Node.js + Edge.js + Edge-ps (PowerShell) + Excel 
 
 ```javascript
-var edge = require('edge');
+var edge = require('edge-js');
 
 var excelPS = edge.func('ps', function () {/*
     

@@ -22,5 +22,26 @@ obj/
 packages/*
 _ReSharper*
 
+.idea/**/*
+node_modules/
+.vs/
+bin/
+obj/
+package-lock.json
+*.tgz
+
+/src/edge-ps-coreclr/obj/
+/src/edge-ps-coreclr/bin/
+src/edge-ps/obj
+src/edge-ps/bin
+lib/bootstrap/bin
+lib/bootstrap/obj
+/src/.idea/
+.vscode
+*.pdb
+lib/ref
+lib/runtimes
+src/edge-ps/.idea
+
 node.exe
 try

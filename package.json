@@ -1,33 +1,43 @@
 {
 	"name": "edge-ps",
-
 	"author": {
 		"name": "Doug Finke",
-		"email": "finked@hotmail.com",
 		"url": "http://dougfinke.com",
 		"twitter": "dfinke"
 	},
-
-	"version": "0.1.0-pre",
-
+	"version": "1.0.0",
 	"description": "edge-ps: run PowerShell and node.js code in-process with edge-ps.js",
-
-	"tags": ["powershell","owin","edge","clr","c#","managed",".net"],
-  
+	"tags": [
+		"powershell",
+		"owin",
+		"edge",
+		"edgejs",
+		"edge-js",
+		"clr",
+		"c#",
+		"managed",
+		".net",
+		"edge.js"
+	],
+	"license": "MIT",
 	"main": "./lib/edge-ps.js",
-	
-	"engines": { "node": ">= 0.6" },
-
-	"dependencies": { },
-
-	"homepage": "https://github.com/dfinke/edge-ps",
-
+	"engines": {
+		"node": ">=16.0"
+	},
+	"homepage": "https://github.com/agracio/edge-ps",
 	"repository": {
 		"type": "git",
-		"url": "git@github.com:dfinke/edge-ps.git"
-  	},
-
-  	"bugs" : {
-  		"url" : "http://github.com/dfinke/edge-ps/issues"
-  	}
+		"url": "git@github.com:agracio/edge-ps.git"
+	},
+	"bugs": {
+		"url": "http://github.com/agracio/edge-ps/issues"
+	},
+	"devDependencies": {
+		"edge-js": "^22.1.1",
+		"express": "^4.19.2"
+	},
+	"scripts": {
+		"build": "node build.js"
+	  }
+	
 }

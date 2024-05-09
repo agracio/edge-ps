@@ -1,4 +1,4 @@
-var edge = require('edge');
+var edge = require('edge-js');
 
 var hello = edge.func('ps', function() {/*
 

@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+<PropertyGroup>
+  <Description>Edge.js enables scripting CLR languages from Node.js. This package is a dependency of Edge.js and supports scripting Powershell from Node.</Description>
+  <AssemblyTitle>Powershell compiler for Edge.js</AssemblyTitle>
+  <VersionPrefix>1.0.0</VersionPrefix>
+  <TargetFramework>net8.0</TargetFramework>
+  <AssemblyName>edge-ps-coreclr</AssemblyName>
+  <PackageId>edge-ps-coreclr</PackageId>
+  <PackageProjectUrl>https://github.com/agracio/edge-ps</PackageProjectUrl>
+  <PackageLicenseUrl>https://github.com/agracio/edge-ps/blob/master/LICENSE</PackageLicenseUrl>
+  <OutputPath>..\..\lib\</OutputPath>
+  <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  <LangVersion>default</LangVersion>
+  <Nullable>disable</Nullable>
+</PropertyGroup>
+<PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+  <PlatformTarget>AnyCPU</PlatformTarget>
+  <Prefer32bit>false</Prefer32bit>
+</PropertyGroup>
+<PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+  <PlatformTarget>AnyCPU</PlatformTarget>
+  <Prefer32bit>false</Prefer32bit>
+</PropertyGroup>
+<ItemGroup>
+  <PackageReference Include="Microsoft.PowerShell.SDK" Version="7.4.2" />
+</ItemGroup>
+<ItemGroup>
+  <Compile Include="..\compiler\EdgeCompiler.cs">
+    <Link>EdgeCompiler.cs</Link>
+  </Compile>
+</ItemGroup>
+</Project>

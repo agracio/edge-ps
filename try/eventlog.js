@@ -1,4 +1,4 @@
-var edge = require('edge')
+var edge = require('edge-js')
 var express = require('express');
 var app = express();
 

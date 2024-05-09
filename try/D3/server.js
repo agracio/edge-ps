@@ -1,7 +1,7 @@
 var express = require('express')
 var http    = require('http'); 
 var path    = require('path'); 
-var edge    = require('edge');
+var edge    = require('edge-js');
 var app     = express();
 var port    = 3000;
 

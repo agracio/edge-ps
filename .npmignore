@@ -45,3 +45,7 @@ src/edge-ps/.idea
 
 node.exe
 try
+src
+build.js
+Excel
+*.sln

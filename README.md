@@ -1,10 +1,11 @@
 ## edge-ps
 
+### PowerShell compiler for [Edge.js](https://github.com/agracio/edge-js). 
 
 ### This library is based on https://github.com/dfinke/edge-ps all credit for original work goes to Doug Finke. 
 ------
 
-### This is a PowerShell compiler for edge.js.
+### Overview
 
 Install edge and edge-ps modules:
 
